@@ -27,4 +27,20 @@ class ConferenceController extends AbstractController
 EOF);
 
     }
+
+    #[Route('/hello/{name}', name: 'hello')]
+    public function hello(string $name = ''): Response
+    {
+        $greet = '';
+        if ($name) {
+            $greet = sprintf('<h1>Hello %s!</h1>', htmlspecialchars($name));
+        }
+        return new Response(<<<EOF
+<html lang="en">
+    <body>
+        $greet
+    </body>
+</html>
+EOF);
+    }
 }
