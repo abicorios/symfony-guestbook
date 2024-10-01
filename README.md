@@ -1,0 +1,1 @@
+Walkthrough the Symfony book https://symfony.com/doc/6.4/the-fast-track/ru/index.html
